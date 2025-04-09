@@ -1,0 +1,36 @@
+# Maintainer: Erik Dubois <erik.dubois@gmail.com>
+pkgname=ISOcalamares-config
+pkgver=24.10
+pkgrel=1
+pkgdesc="calamares config for bridge"
+arch=('any')
+url="https://github.com/MashKyrielight0228"
+license=('GPL3')
+makedepends=('git')
+depends=()
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${pkgname}::"git+${url}/${pkgname}")
+sha256sums=('SKIP')
+package() {
+  # mkdir -p "${pkgdir}/etc"
+  # install -dm755 ${pkgdir}/etc
+
+  # cp -r ${srcdir}/${pkgname}/etc/* ${pkgdir}/etc
+
+  InternalDir="${srcdir}/${pkgname}"
+
+  # Copy files
+  if [ -d "${InternalDir}/usr" ]; then
+    cp -r "${InternalDir}/usr" "${pkgdir}/"
+  fi
+
+  if [ -d "${InternalDir}/etc" ]; then
+    cp -r "${InternalDir}/etc" "${pkgdir}/"
+  fi
+
+  if [ -d "${InternalDir}/opt" ]; then
+    cp -r "${InternalDir}/opt" "${pkgdir}/"
+  fi
+}
