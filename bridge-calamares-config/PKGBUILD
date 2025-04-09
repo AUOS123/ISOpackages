@@ -1,5 +1,5 @@
-# Maintainer: Erik Dubois <erik.dubois@gmail.com>
-pkgname=ISOcalamares-config
+# Maintainer: MashKyrielight0228 <mashkyrielight0228@github.com>
+pkgname=bridge-calamares-config
 pkgver=24.10
 pkgrel=1
 pkgdesc="calamares config for bridge"
