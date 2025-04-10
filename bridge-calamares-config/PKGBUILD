@@ -1,7 +1,7 @@
 # Maintainer: MashKyrielight0228 <mashkyrielight0228@github.com>
 pkgname=bridge-calamares-config
 pkgver=24.10
-pkgrel=4
+pkgrel=5
 pkgdesc="calamares config for bridge"
 arch=('any')
 url="https://github.com/MashKyrielight0228"
